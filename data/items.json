@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nombre": "Botella de plástico (PET)",
+    "alias": ["gaseosa", "agua pura", "bote de plastico"],
+    "categoria": "reciclable",
+    "contenedor": "Inorgánico Reciclable",
+    "color_hex": "#0284c7",
+    "instrucciones": "Vaciar, enjuagar y aplastar. Dejar la tapa puesta."
+  },
+  {
+    "id": 2,
+    "nombre": "Duroport / Poliestireno",
+    "alias": ["vaso de duroport", "plato desechable", "estereofon"],
+    "categoria": "no_reciclable",
+    "contenedor": "No Reciclable / Común",
+    "color_hex": "#1f2937",
+    "instrucciones": "No es procesable en reciclaje común; depositar en basura general."
+  },
+  {
+    "id": 3,
+    "nombre": "Cáscaras y restos de frutas/verduras",
+    "alias": ["comida", "banano", "manzana", "desecho de cocina"],
+    "categoria": "organico",
+    "contenedor": "Orgánico",
+    "color_hex": "#16a34a",
+    "instrucciones": "Sin envolturas ni plásticos adheridos."
+  },
+  {
+    "id": 4,
+    "nombre": "Bolsa de frituras / snacks",
+    "alias": ["tortrix", "papas lays", "empaque metalizado"],
+    "categoria": "no_reciclable",
+    "contenedor": "No Reciclable / Común",
+    "color_hex": "#1f2937",
+    "instrucciones": "Empaque laminado/metalizado no reciclable."
+  }
+]
