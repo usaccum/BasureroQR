@@ -44,12 +44,27 @@ function render() {
   });
 
   if (filtered.length === 0) {
+    const currentQuery = searchInput.value.trim();
     resultsList.innerHTML = `
       <div class="empty-state">
-        <p>No se encontraron resultados para "<strong>${searchInput.value}</strong>".</p>
-        <p style="font-size: 0.8rem; margin-top: 0.35rem;">Prueba con otra palabra.</p>
+        <p>No encontramos resultados para "<strong>${currentQuery}</strong>".</p>
+        <div style="margin-top: 1rem;">
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            ¿Crees que debería estar en la lista?
+          </p>
+          <button id="btnSugerir" style="background: #0f172a; color: #fff; border: none; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.85rem;">
+            📬 Sugerir agregar "${currentQuery}"
+          </button>
+        </div>
       </div>
     `;
+
+    const btn = document.getElementById("btnSugerir");
+    if (btn) {
+      btn.addEventListener("click", function () {
+        alert("¡Gracias! Registraremos '" + currentQuery + "' para agregarlo pronto.");
+      });
+    }
     return;
   }
 

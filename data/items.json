@@ -1,114 +1,482 @@
 [
-  {
-    "id": 1,
-    "nombre": "Cáscaras de frutas y verduras",
-    "alias": ["banano", "platano", "manzana", "naranja", "papa", "zanahoria", "aguacate"],
-    "categoria": "organico",
-    "contenedor": "Orgánico",
-    "instrucciones": "Restos crudos o cocidos sin bolsas ni plástico."
-  },
-  {
-    "id": 2,
-    "nombre": "Restos de comida y sobras preparadas",
-    "alias": ["arroz", "frijoles", "tortillas", "pan", "huesos", "carne"],
-    "categoria": "organico",
-    "contenedor": "Orgánico",
-    "instrucciones": "Sin empaques, servilletas ni cubiertos desechables."
-  },
-  {
-    "id": 3,
-    "nombre": "Broza de café y saquitos de té",
-    "alias": ["cafe", "filtro de cafe", "te"],
-    "categoria": "organico",
-    "contenedor": "Orgánico",
-    "instrucciones": "Retira la grapa de metal de la bolsita de té si tiene."
-  },
-  {
-    "id": 4,
-    "nombre": "Hojas secas y restos de jardín",
-    "alias": ["grama", "flores", "ramas", "pasto"],
-    "categoria": "organico",
-    "contenedor": "Orgánico",
-    "instrucciones": "Compostable. Sin piedras ni tierra en exceso."
-  },
-  {
-    "id": 9,
-    "nombre": "Servilletas y papel mayordomo usados",
-    "alias": ["servilleta con grasa", "papel de cocina", "kleenex", "toalla de papel"],
-    "categoria": "inorganico",
-    "contenedor": "Inorgánico (No reciclable)",
-    "instrucciones": "Por grasa e higiene no entran en la cadena de reciclaje."
-  },
-  {
-    "id": 10,
-    "nombre": "Duroport / Poliestireno expandido",
-    "alias": ["vaso de duroport", "plato desechable", "estereofon", "termos de duroport"],
-    "categoria": "inorganico",
-    "contenedor": "Inorgánico (No reciclable)",
-    "instrucciones": "Material no reciclable a nivel local; va a desecho común."
-  },
-  {
-    "id": 11,
-    "nombre": "Bolsas de frituras / snacks metalizadas",
-    "alias": ["tortrix", "papas", "chucherias", "galletas", "empaque laminado"],
-    "categoria": "inorganico",
-    "contenedor": "Inorgánico (No reciclable)",
-    "instrucciones": "Los laminados multicapa plástico-aluminio van a basura común."
-  },
-  {
-    "id": 12,
-    "nombre": "Pajillas y cubiertos plásticos desechables",
-    "alias": ["tenedor desechable", "cuchara plastica", "pajilla", "vaso desechable sucio"],
-    "categoria": "inorganico",
-    "contenedor": "Inorgánico (No reciclable)",
-    "instrucciones": "Plásticos de un solo uso difíciles de reciclar."
-  },
-  {
-    "id": 13,
-    "nombre": "Caja de pizza manchada de grasa",
-    "alias": ["pizza", "carton grasoso"],
-    "categoria": "inorganico",
-    "contenedor": "Inorgánico (No reciclable)",
-    "instrucciones": "La grasa arruina el reciclaje. Si la tapa está limpia, recórtala y ponla en Reciclable."
-  },
-  {
-    "id": 14,
-    "nombre": "Papel higiénico y toallas sanitarias",
-    "alias": ["papel de baño", "toalla femenina", "tampon", "panal"],
-    "categoria": "inorganico",
-    "contenedor": "Inorgánico (No reciclable)",
-    "instrucciones": "Residuo sanitario; depositar en bolsa cerrada en desecho común."
-  },
-  {
-    "id": 5,
-    "nombre": "Botellas de plástico (PET / PEAD)",
-    "alias": ["gaseosa", "agua pura", "bote de plastico", "envase de jugo", "bote de shampoo"],
-    "categoria": "reciclable",
-    "contenedor": "Reciclable",
-    "instrucciones": "Vacías, enjuagadas y aplastadas. Con su tapita puesta."
-  },
-  {
-    "id": 6,
-    "nombre": "Latas de aluminio y hojalata",
-    "alias": ["lata de gaseosa", "cerveza", "lata de atun", "conservas", "frijoles en lata"],
-    "categoria": "reciclable",
-    "contenedor": "Reciclable",
-    "instrucciones": "Enjuagadas y sin residuos líquidos o restos de comida."
-  },
-  {
-    "id": 7,
-    "nombre": "Cajas de cartón y hojas de papel",
-    "alias": ["hojas bond", "cuaderno", "periodico", "caja de cereal", "cartoncillo"],
-    "categoria": "reciclable",
-    "contenedor": "Reciclable",
-    "instrucciones": "Secos, limpios y desarmados para ocupar menos espacio."
-  },
-  {
-    "id": 8,
-    "nombre": "Envases de vidrio y frascos",
-    "alias": ["botella de vidrio", "frasco de mermelada", "bote de cafe"],
-    "categoria": "reciclable",
-    "contenedor": "Reciclable",
-    "instrucciones": "Enteros, limpios y sin tapas metálicas."
-  }
+{
+"id": 1,
+"nombre": "Cáscaras de frutas y verduras",
+"alias": ["banano", "platano", "manzana", "naranja", "papa", "zanahoria", "aguacate", "limon", "sandia", "melon", "pina"],
+"categoria": "organico",
+"contenedor": "Orgánico",
+"instrucciones": "Restos crudos o cocidos sin etiquetas plásticas ni bolsas."
+},
+{
+"id": 2,
+"nombre": "Restos de comida y sobras preparadas",
+"alias": ["arroz", "frijoles", "tortillas", "pan", "huesos", "carne", "pollo", "pescado", "sobras"],
+"categoria": "organico",
+"contenedor": "Orgánico",
+"instrucciones": "Sin empaques, cubiertos plásticos ni servilletas sucias con químicos."
+},
+{
+"id": 3,
+"nombre": "Broza de café y saquitos de té",
+"alias": ["cafe molido", "filtro de cafe", "te", "infusion", "borra"],
+"categoria": "organico",
+"contenedor": "Orgánico",
+"instrucciones": "Retirar la grapa metálica del saquito si tiene."
+},
+{
+"id": 4,
+"nombre": "Hojas secas, flores y restos de poda",
+"alias": ["grama", "flores marchitas", "ramas", "pasto", "hierba", "hojarasca"],
+"categoria": "organico",
+"contenedor": "Orgánico",
+"instrucciones": "Compostable. Sin piedras ni tierra en exceso."
+},
+{
+"id": 5,
+"nombre": "Cáscaras de huevo",
+"alias": ["huevo", "cascaron"],
+"categoria": "organico",
+"contenedor": "Orgánico",
+"instrucciones": "Excelente fuente de calcio para composta. Depositar directamente."
+},
+{
+"id": 6,
+"nombre": "Semillas, pepitas y carozos",
+"alias": ["pepitas", "semilla de aguacate", "hueso de durazno", "semilla de limon"],
+"categoria": "organico",
+"contenedor": "Orgánico",
+"instrucciones": "Residuos vegetales 100% biodegradables."
+},
+{
+"id": 7,
+"nombre": "Cáscaras de frutos secos y maní",
+"alias": ["mani", "nueces", "pistachos", "almendras"],
+"categoria": "organico",
+"contenedor": "Orgánico",
+"instrucciones": "Biodegradables en compostaje."
+},
+{
+"id": 8,
+"nombre": "Palillos de dientes y pinchos de madera",
+"alias": ["palillo", "mondadientes", "pincho de madera", "palo de paleta"],
+"categoria": "organico",
+"contenedor": "Orgánico",
+"instrucciones": "Madera natural sin barniz ni plástico añadido."
+},
+{
+"id": 9,
+"nombre": "Tapones de corcho natural",
+"alias": ["corcho de vino", "corcho"],
+"categoria": "organico",
+"contenedor": "Orgánico",
+"instrucciones": "Solo si es corcho 100% natural, no tapones sintéticos."
+},
+{
+"id": 10,
+"nombre": "Botellas de plástico PET (agua, refresco)",
+"alias": ["gaseosa", "agua pura", "bote de plastico", "envase pet", "coca cola", "pepsi"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Vaciar, enjuagar y aplastar. Dejar la tapa puesta."
+},
+{
+"id": 11,
+"nombre": "Envases plásticos HDPE (leche, detergente, shampoo)",
+"alias": ["bote de shampoo", "galon de leche", "envase de cloro", "jabon liquido"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Enjuagar para retirar químicos o grasas y escurrir."
+},
+{
+"id": 12,
+"nombre": "Latas de aluminio de bebidas",
+"alias": ["lata de refresco", "cerveza", "lata de jugo", "gaseosa en lata"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Vaciar líquido completamente y aplastar si es posible."
+},
+{
+"id": 13,
+"nombre": "Latas de conservas y hojalata (atún, frijoles)",
+"alias": ["lata de atun", "lata de verduras", "frijoles en lata", "conserva"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Enjuagar con poca agua para quitar rastros de comida o grasa."
+},
+{
+"id": 14,
+"nombre": "Cajas de cartón corrugado",
+"alias": ["caja de amazon", "caja de carton", "embalaje", "caja de mudanza"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Desarmar, aplastar y retirar cinta plástica en exceso."
+},
+{
+"id": 15,
+"nombre": "Cajas de cereal y cartoncillo seco",
+"alias": ["caja de cereal", "caja de zapatos", "caja de te", "caja de galletas"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Aplanar. La bolsa plástica interior va por separado."
+},
+{
+"id": 16,
+"nombre": "Hojas de papel de oficina, libretas y fotocopias",
+"alias": ["papel bond", "hoja de examen", "cuaderno", "facturas", "impresiones"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Secas y sin grapas ni espirales metálicos o plásticos."
+},
+{
+"id": 17,
+"nombre": "Periódicos y revistas",
+"alias": ["diario", "prensa", "catalogo", "folleto"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Secos y limpios. No amarrar con alambres."
+},
+{
+"id": 18,
+"nombre": "Tubos de cartón de papel higiénico o cocina",
+"alias": ["rollo de papel", "cono de carton", "rollo de mayordomo"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Cartón limpio y seco."
+},
+{
+"id": 19,
+"nombre": "Botellas y frascos de vidrio (transparentes o ámbar)",
+"alias": ["botella de vino", "frasco de cafe", "mermelada", "botella de vidrio", "cerveza en botella"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Enteros y enjuagados. Quitar la tapa metálica y ponerla también en reciclable."
+},
+{
+"id": 20,
+"nombre": "Envases multicapa Tetra Pak (jugo, leche)",
+"alias": ["tetra pack", "caja de leche", "caja de jugo", "crema"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Enjuagar, aplastar y dejar la tapa puesta."
+},
+{
+"id": 21,
+"nombre": "Bolsas plásticas de supermercado limpias",
+"alias": ["bolsa de nylon", "bolsa de compras", "bolsa transparente limpia"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Solo si están completamente secas y libres de restos de comida."
+},
+{
+"id": 22,
+"nombre": "Tapas metálicas de botellas (chapas)",
+"alias": ["corcholata", "chapa", "tapa de botella de vidrio"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Metal reciclable; se pueden acumular dentro de una lata de aluminio."
+},
+{
+"id": 23,
+"nombre": "Papel aluminio limpio",
+"alias": ["aluminio", "rollo de aluminio"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Solo si está completamente libre de restos de grasa y comida."
+},
+{
+"id": 24,
+"nombre": "Envases plásticos de yogur o crema limpios",
+"alias": ["vaso de yogur", "tarro de crema", "bote de mantequilla"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Enjuagados y sin tapas de aluminio."
+},
+{
+"id": 25,
+"nombre": "Ganchos de ropa de alambre o plástico limpios",
+"alias": ["gancho", "percha de alambre", "percha plastica"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Metálicos o plásticos rígidos enteros."
+},
+{
+"id": 26,
+"nombre": "Servilletas y papel mayordomo usados",
+"alias": ["servilleta grasosa", "papel de cocina", "kleenex", "toalla de papel usada"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "La grasa y la suciedad degradan las fibras e impiden su reciclaje."
+},
+{
+"id": 27,
+"nombre": "Duroport / Poliestireno expandido",
+"alias": ["vaso de duroport", "plato desechable", "estereofon", "termos de duroport", "hielo seco"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Material frágil de escaso valor en cadenas locales; va a desecho común."
+},
+{
+"id": 28,
+"nombre": "Bolsas de frituras, golosinas y snacks laminados",
+"alias": ["tortrix", "papas fritas", "chucherias", "doritos", "lays", "galletas empaque metalizado"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Empaque metalizado compuesto (plástico + aluminio) no separable."
+},
+{
+"id": 29,
+"nombre": "Pajillas y cubiertos desechables de plástico",
+"alias": ["pajilla", "popote", "cenedor plastico", "cuchara desechable", "cuchillo plastico"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Plásticos de un solo uso muy difíciles de procesar."
+},
+{
+"id": 30,
+"nombre": "Caja de pizza manchada con grasa o queso",
+"alias": ["pizza", "carton grasoso", "caja con aceite"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "La grasa arruina el lote de reciclaje. Si la tapa está limpia, recórtala para reciclaje."
+},
+{
+"id": 31,
+"nombre": "Papel higiénico usado y toallitas húmedas",
+"alias": ["papel de bano", "toallitas humedas", "wipes", "toalla de bebe"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Residuo sanitario; siempre en bolsa cerrada al desecho común."
+},
+{
+"id": 32,
+"nombre": "Pañales y toallas sanitarias",
+"alias": ["panal", "toalla femenina", "tampon", "protector diario"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Residuo sanitario contaminado. No mezclar con reciclaje."
+},
+{
+"id": 33,
+"nombre": "Vasos encerados para café o gaseosa",
+"alias": ["vaso de cafe para llevar", "vaso de carton encerado", "vaso termico de carton"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Tienen una fina película plástica interior difícil de separar."
+},
+{
+"id": 34,
+"nombre": "Mascarillas y guantes desechables",
+"alias": ["cubrebocas", "mascarilla quirurgica", "guantes de latex", "guantes de nitrilo"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Desecho de protección sanitaria; va a basura común."
+},
+{
+"id": 35,
+"nombre": "Chicles / Goma de mascar",
+"alias": ["chicle", "goma de mascar", "burbuja"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Polímero sintético no biodegradable."
+},
+{
+"id": 36,
+"nombre": "Colillas de cigarro",
+"alias": ["cigarro", "filtro de cigarro", "ceniza", "pucho"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Contienen químicos tóxicos y acetato de celulosa no compostable. Apagar bien."
+},
+{
+"id": 37,
+"nombre": "Papel carbón, papel encerado y papel adhesivo",
+"alias": ["stickers", "calcomanias", "papel encerado", "cinta adhesiva", "masking tape", "teipe"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Los adhesivos y recubrimientos químicos impiden el reciclaje de papel."
+},
+{
+"id": 38,
+"nombre": "Cerámica rota, loza y porcelana",
+"alias": ["taza rota", "plato de ceramica", "taza de cafe rota", "maceta rota"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "No funde a la misma temperatura del vidrio de botella. Envolver si tiene filo."
+},
+{
+"id": 39,
+"nombre": "Espejos y vidrios planos de ventana",
+"alias": ["vidrio roto", "espejo", "vidrio de ventana"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Tienen composición química distinta al vidrio de envase. Envolver en papel grueso por seguridad."
+},
+{
+"id": 40,
+"nombre": "Bombillos incandescentes o halógenos",
+"alias": ["foco", "bombillo fundido", "bombilla"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Contienen filamentos y metales variados. Nota: Fluorescentes o LED idealmente en punto limpio."
+},
+{
+"id": 41,
+"nombre": "Esponjas de cocina y estropajos",
+"alias": ["esponja de platos", "estropajo", "fibra verde", "paste sintetico"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Espumas sintéticas no reciclables."
+},
+{
+"id": 42,
+"nombre": "Cepillos de dientes de plástico",
+"alias": ["cepillo de dientes", "cepillo dental"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Compuesto de múltiples plásticos fusionados con nylon."
+},
+{
+"id": 43,
+"nombre": "Tubos de pasta de dientes",
+"alias": ["pasta de dientes", "dentifrico", "tubo de crema dental"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Tubo multicapa aluminio-plástico contaminado con residuos."
+},
+{
+"id": 44,
+"nombre": "Hilo dental",
+"alias": ["seda dental", "hilo de dientes"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Fibra plástica sintética no reciclable."
+},
+{
+"id": 45,
+"nombre": "Lapiceros, marcadores y bolígrafos",
+"alias": ["lapicero", "boligrafo", "marcador", "plumon", "resaltador"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Plásticos duros mezclados con tintas químicas y resortes metálicos."
+},
+{
+"id": 46,
+"nombre": "Bolsitas de sílice (desecante)",
+"alias": ["silica gel", "sobre de secante", "bolsita para humedad"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Químico absorbente; desechar sellado en basura común."
+},
+{
+"id": 47,
+"nombre": "Ropa vieja desgastada o retazos de tela sintética",
+"alias": ["calcetin roto", "tela", "trapo viejo", "ropa rota"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Si no es donable ni reutilizable como trapo, va a desecho común."
+},
+{
+"id": 48,
+"nombre": "Calzado y zapatos viejos",
+"alias": ["zapatos rotos", "tenis viejos", "chancletas", "sandalias rotas"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Materiales mixtos (cuero, goma, pegamento) no reciclables de forma estándar."
+},
+{
+"id": 49,
+"nombre": "Heces de mascotas (perros/gatos) y arena sanitaria",
+"alias": ["caca de perro", "arena de gato", "popó de perro", "excremento"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Peligro biológico. No compostar en casa; desechar en bolsa cerrada en desecho común."
+},
+{
+"id": 50,
+"nombre": "Blíster de pastillas y medicamentos vacíos",
+"alias": ["pastillas empaque", "blister", "empaque de medicina"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Fusión de plástico y papel de aluminio no separable."
+},
+{
+"id": 51,
+"nombre": "Envases plásticos de comida rápida manchados de grasa",
+"alias": ["caja de hamburguesa", "envase termico con grasa", "caja de pollo frito"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "La grasa absorbida impide su procesamiento en reciclaje."
+},
+{
+"id": 52,
+"nombre": "Papel celofán",
+"alias": ["celofan", "envoltura de regalo transparente"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Plástico no apto para reciclaje mecánico común."
+},
+{
+"id": 53,
+"nombre": "Residuos de aspiradora o barrido",
+"alias": ["polvo", "pelusas", "basura de escoba"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Mezcla de microplásticos, pelos y polvo inerte."
+},
+{
+"id": 54,
+"nombre": "Envases de aerosol vacíos (desodorante, ambientador)",
+"alias": ["spray", "desodorante en aerosol", "lata de pintura spray"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Solo si están totalmente despresurizados y vacíos (de metal)."
+},
+{
+"id": 55,
+"nombre": "Papel triturado de oficina",
+"alias": ["papel picado", "tiras de papel", "documentos destruidos"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Reciclable en seco; idealmente colocarlo dentro de una bolsa de papel para que no se esparza."
+},
+{
+"id": 56,
+"nombre": "Clips y grapas metálicas",
+"alias": ["grapa", "clip de papel", "sujetapapeles"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Metal férrico reciclable."
+},
+{
+"id": 57,
+"nombre": "Tapas plásticas sueltas",
+"alias": ["tapita", "tapon de botella", "tapa de refresco"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Plástico PP/PEAD de alto valor. Se pueden donar a campañas de reciclaje o colocar en su botella."
+},
+{
+"id": 58,
+"nombre": "Papel de envolver regalos (sin purpurina/brillantina)",
+"alias": ["papel de regalo", "envoltura de cumpleanos"],
+"categoria": "reciclable",
+"contenedor": "Reciclable",
+"instrucciones": "Solo reciclable si es papel estándar; si tiene escarcha o plástico reflectivo va a inorgánico."
+},
+{
+"id": 59,
+"nombre": "Papel térmico de ticket o voucher",
+"alias": ["recibo", "ticket de compra", "voucher de tarjeta"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Contiene bisfenol A (BPA) y químicos que contaminan el reciclaje de papel."
+},
+{
+"id": 60,
+"nombre": "Hisopos / Cotonetes",
+"alias": ["cotonete", "hisopo", "palito con algodon"],
+"categoria": "inorganico",
+"contenedor": "Inorgánico (No reciclable)",
+"instrucciones": "Plástico fino y residuo higiénico personal; desecho común."
+}
 ]
