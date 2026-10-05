@@ -1,42 +1,77 @@
-let wasteData = [];
+let wasteItems = [];
+let activeFilter = 'all';
 
-// 1. Carga única y en caché
-async function init() {
+const searchInput = document.getElementById('searchInput');
+const resultsList = document.getElementById('resultsList');
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+// normalizaciòn de la entrada
+function normalize(text) {
+  return text ? text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() : "";
+}
+
+// Carga inicial del JSON
+async function loadData() {
   try {
-    const res = await fetch('./data/items.json', { cache: 'force-cache' });
-    wasteData = await res.json();
-    render(wasteData);
-  } catch (err) {
-    console.error("Error al cargar dataset:", err);
+    const response = await fetch('./data/items.json');
+    if (!response.ok) throw new Error("Error en la petición");
+    wasteItems = await response.json();
+    render();
+  } catch (error) {
+    console.error("No se pudo cargar items.json:", error);
+    resultsList.innerHTML = `
+      <div class="empty-state">
+        <p>No se pudo cargar el catálogo de residuos.</p>
+      </div>
+    `;
   }
 }
 
-// normalizaciòn
-function normalize(str) {
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-}
+function render() {
+  const term = normalize(searchInput.value.trim());
 
-// filtrado de datos
-function searchWaste(query) {
-  const cleanQuery = normalize(query.trim());
-  if (!cleanQuery) return wasteData;
+  const filtered = wasteItems.filter(item => {
+    const matchesCategory = (activeFilter === 'all') || (item.categoria === activeFilter);
+    if (!matchesCategory) return false;
 
-  return wasteData.filter(item => {
-    const matchName = normalize(item.nombre).includes(cleanQuery);
-    const matchAlias = item.alias?.some(a => normalize(a).includes(cleanQuery));
-    const matchCat = normalize(item.contenedor).includes(cleanQuery);
-    return matchName || matchAlias || matchCat;
+    if (!term) return true;
+
+    const nameMatch = normalize(item.nombre).includes(term);
+    const aliasMatch = item.alias && item.alias.some(a => normalize(a).includes(term));
+    const noteMatch = normalize(item.instrucciones).includes(term);
+
+    return nameMatch || aliasMatch || noteMatch;
   });
+
+  if (filtered.length === 0) {
+    resultsList.innerHTML = `
+      <div class="empty-state">
+        <p>No se encontraron resultados para "<strong>${searchInput.value}</strong>".</p>
+        <p style="font-size: 0.8rem; margin-top: 0.35rem;">Prueba con otra palabra.</p>
+      </div>
+    `;
+    return;
+  }
+
+  resultsList.innerHTML = filtered.map(item => `
+    <article class="card cat-${item.categoria}">
+      <h3>${item.nombre}</h3>
+      <p>${item.instrucciones}</p>
+      <span class="badge cat-${item.categoria}">${item.contenedor}</span>
+    </article>
+  `).join('');
 }
 
-// debounce
-let timeout;
-document.getElementById('search').addEventListener('input', (e) => {
-  clearTimeout(timeout);
-  timeout = setTimeout(() => {
-    const results = searchWaste(e.target.value);
-    render(results);
-  }, 120);
+//entrada+filtrado
+searchInput.addEventListener('input', render);
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render();
+  });
 });
 
-init();
+loadData();

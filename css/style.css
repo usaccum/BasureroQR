@@ -1,0 +1,175 @@
+:root {
+  --color-organico: #15803d;
+  --bg-organico: #dcfce7;
+  --color-reciclable: #0284c7;
+  --bg-reciclable: #e0f2fe;
+  --color-inorganico: #374151;
+  --bg-inorganico: #f3f4f6;
+  --bg-body: #f8fafc;
+  --text-main: #1f2937;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border-soft: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  padding: 1.25rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+header p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Buscador fijo superior */
+.search-wrapper {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 10;
+  background-color: var(--bg-body);
+  padding-bottom: 0.5rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--border-soft);
+  background-color: #ffffff;
+  font-size: 1rem;
+  color: var(--text-main);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--color-organico);
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+}
+
+/* Filtros rápidos */
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-top: 0.5rem;
+  scrollbar-width: none;
+}
+
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-btn {
+  border: none;
+  background: #ffffff;
+  border: 1px solid var(--border-soft);
+  padding: 0.4rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.filter-btn.active {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+/* Resultados */
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-soft);
+  border-left-width: 6px;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/*variante por tipo de residuo*/
+.card.cat-organico { border-left-color: var(--color-organico); }
+.badge.cat-organico { background-color: var(--bg-organico); color: var(--color-organico); }
+
+.card.cat-inorganico { border-left-color: var(--color-inorganico); }
+.badge.cat-inorganico { background-color: var(--bg-inorganico); color: var(--color-inorganico); }
+
+
+.card.cat-reciclable { border-left-color: var(--color-reciclable); }
+.badge.cat-reciclable { background-color: var(--bg-reciclable); color: var(--color-reciclable); }
+
+.empty-state {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-muted);
+}

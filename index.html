@@ -1,94 +1,40 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¿Dónde va mi residuo?</title>
-  <style>
-    * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-    body { background-color: #f3f4f6; margin: 0; padding: 1.5rem; display: flex; justify-content: center; }
-    .container { width: 100%; max-width: 480px; }
-    h1 { font-size: 1.5rem; text-align: center; color: #111827; margin-bottom: 0.5rem; }
-    p.subtitle { text-align: center; color: #6b7280; font-size: 0.9rem; margin-top: 0; margin-bottom: 1.5rem; }
-    input[type="text"] {
-      width: 100%; padding: 0.75rem 1rem; border-radius: 8px; border: 1px solid #d1d5db;
-      font-size: 1rem; outline: none; margin-bottom: 1rem;
-    }
-    input[type="text"]:focus { border-color: #059669; ring: 2px solid #a7f3d0; }
-    .results { display: flex; flex-direction: column; gap: 0.75rem; }
-    .card { background: #fff; padding: 1rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-left: 6px solid #ccc; }
-    .card h3 { margin: 0 0 0.25rem 0; font-size: 1.1rem; color: #1f2937; }
-    .card p { margin: 0; font-size: 0.9rem; color: #4b5563; }
-    .badge {
-      display: inline-block; padding: 0.2rem 0.6rem; border-radius: 9999px;
-      font-size: 0.75rem; font-weight: bold; text-transform: uppercase; margin-top: 0.5rem;
-    }
-    /* Estilos por contenedor */
-    .border-organico { border-color: #15803d; }
-    .badge-organico { background: #dcfce7; color: #15803d; }
-    .border-inorganico { border-color: #0284c7; }
-    .badge-inorganico { background: #e0f2fe; color: #0284c7; }
-    .border-comun { border-color: #4b5563; }
-    .badge-comun { background: #f3f4f6; color: #374151; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Dónde va mi residuo? ♻️</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<div class="container">
-  <h1>¿En qué bote va? ♻️</h1>
-  <p class="subtitle">Escribe el residuo para saber dónde depositarlo</p>
+  <div class="container">
+    <header>
+      <h1>Clasificador de Residuos ♻️</h1>
+      <p>Consulta en qué contenedor depositar tu desecho</p>
+    </header>
 
-  <input type="text" id="search" placeholder="Ej. cáscara de banano, botella, servilleta..." autofocus>
+    <div class="search-wrapper">
+      <input
+        type="text"
+        id="searchInput"
+        class="search-input"
+        placeholder="Buscar residuo (ej. banano, lata, tortrix...)"
+        autocomplete="off"
+        autofocus
+      />
 
-  <div class="results" id="resultsList"></div>
-</div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="organico">🟢 Orgánico</button>
+        <button class="filter-btn" data-filter="inorganico">⚫ Inorgánico</button>
+        <button class="filter-btn" data-filter="reciclable">🔵 Reciclable</button>
+      </div>
+    </div>
 
-<script>
-  const items = [
-    { name: "Cáscaras de frutas / verduras", bin: "Orgánico (Verde)", type: "organico", note: "Restos de comida cruda o preparada sin plástico." },
-    { name: "Café molido y bolsitas de té", bin: "Orgánico (Verde)", type: "organico", note: "Retira las grapas si las bolsitas tienen." },
-    { name: "Botellas plásticas (PET)", bin: "Inorgánico Reciclable (Azul / Blanco)", type: "inorganico", note: "Vacías, enjuagadas y aplastadas." },
-    { name: "Latas de aluminio y conserva", bin: "Inorgánico Reciclable (Azul / Blanco)", type: "inorganico", note: "Limpias y secas." },
-    { name: "Cajas de cartón y hojas de papel", bin: "Inorgánico Reciclable (Azul / Blanco)", type: "inorganico", note: "Solo si están limpias y secas." },
-    { name: "Servilletas y papel higiénico usados", bin: "No reciclable / Común (Negro)", type: "comun", note: "No se pueden reciclar por higiene y grasa." },
-    { name: "Duroport / Poliestireno", bin: "No reciclable / Común (Negro)", type: "comun", note: "La mayoría de centros locales no lo procesan." },
-    { name: "Caja de pizza con grasa", bin: "No reciclable / Común (Negro)", type: "comun", note: "Si la tapa está limpia, recorta la tapa y recíclala." }
-  ];
+    <main class="results" id="resultsList"></main>
+  </div>
 
-  const searchInput = document.getElementById("search");
-  const resultsList = document.getElementById("resultsList");
-
-  function render(list) {
-    resultsList.innerHTML = "";
-    if (list.length === 0) {
-      resultsList.innerHTML = <p style="text-align:center; color:#9ca3af;">No se encontraron resultados.</p>;
-      return;
-    }
-    list.forEach(item => {
-      const card = document.createElement("div");
-      card.innerHTML = `
-        <h3>${item.name}</h3>
-        <p>${item.note}</p>
-        <span class="badge badge-${item.type}">${item.bin}</span>
-      `;
-      resultsList.appendChild(card);
-    });
-  }
-
-  // Render inicial
-  render(items);
-
-  // Filtrado en tiempo real
-  searchInput.addEventListener("input", (e) => {
-    const term = e.target.value.toLowerCase().trim();
-    const filtered = items.filter(item => 
-      item.name.toLowerCase().includes(term) || item.note.toLowerCase().includes(term)
-    );
-    render(filtered);
-  });
-</script>
-
+  <script src="js/app.js"></script>
 </body>
 </html>
-
-usac.cum"<gmail class="com"></gmail>

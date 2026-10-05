@@ -1,38 +1,114 @@
 [
   {
     "id": 1,
-    "nombre": "Botella de plástico (PET)",
-    "alias": ["gaseosa", "agua pura", "bote de plastico"],
-    "categoria": "reciclable",
-    "contenedor": "Inorgánico Reciclable",
-    "color_hex": "#0284c7",
-    "instrucciones": "Vaciar, enjuagar y aplastar. Dejar la tapa puesta."
+    "nombre": "Cáscaras de frutas y verduras",
+    "alias": ["banano", "platano", "manzana", "naranja", "papa", "zanahoria", "aguacate"],
+    "categoria": "organico",
+    "contenedor": "Orgánico",
+    "instrucciones": "Restos crudos o cocidos sin bolsas ni plástico."
   },
   {
     "id": 2,
-    "nombre": "Duroport / Poliestireno",
-    "alias": ["vaso de duroport", "plato desechable", "estereofon"],
-    "categoria": "no_reciclable",
-    "contenedor": "No Reciclable / Común",
-    "color_hex": "#1f2937",
-    "instrucciones": "No es procesable en reciclaje común; depositar en basura general."
+    "nombre": "Restos de comida y sobras preparadas",
+    "alias": ["arroz", "frijoles", "tortillas", "pan", "huesos", "carne"],
+    "categoria": "organico",
+    "contenedor": "Orgánico",
+    "instrucciones": "Sin empaques, servilletas ni cubiertos desechables."
   },
   {
     "id": 3,
-    "nombre": "Cáscaras y restos de frutas/verduras",
-    "alias": ["comida", "banano", "manzana", "desecho de cocina"],
+    "nombre": "Broza de café y saquitos de té",
+    "alias": ["cafe", "filtro de cafe", "te"],
     "categoria": "organico",
     "contenedor": "Orgánico",
-    "color_hex": "#16a34a",
-    "instrucciones": "Sin envolturas ni plásticos adheridos."
+    "instrucciones": "Retira la grapa de metal de la bolsita de té si tiene."
   },
   {
     "id": 4,
-    "nombre": "Bolsa de frituras / snacks",
-    "alias": ["tortrix", "papas lays", "empaque metalizado"],
-    "categoria": "no_reciclable",
-    "contenedor": "No Reciclable / Común",
-    "color_hex": "#1f2937",
-    "instrucciones": "Empaque laminado/metalizado no reciclable."
+    "nombre": "Hojas secas y restos de jardín",
+    "alias": ["grama", "flores", "ramas", "pasto"],
+    "categoria": "organico",
+    "contenedor": "Orgánico",
+    "instrucciones": "Compostable. Sin piedras ni tierra en exceso."
+  },
+  {
+    "id": 9,
+    "nombre": "Servilletas y papel mayordomo usados",
+    "alias": ["servilleta con grasa", "papel de cocina", "kleenex", "toalla de papel"],
+    "categoria": "inorganico",
+    "contenedor": "Inorgánico (No reciclable)",
+    "instrucciones": "Por grasa e higiene no entran en la cadena de reciclaje."
+  },
+  {
+    "id": 10,
+    "nombre": "Duroport / Poliestireno expandido",
+    "alias": ["vaso de duroport", "plato desechable", "estereofon", "termos de duroport"],
+    "categoria": "inorganico",
+    "contenedor": "Inorgánico (No reciclable)",
+    "instrucciones": "Material no reciclable a nivel local; va a desecho común."
+  },
+  {
+    "id": 11,
+    "nombre": "Bolsas de frituras / snacks metalizadas",
+    "alias": ["tortrix", "papas", "chucherias", "galletas", "empaque laminado"],
+    "categoria": "inorganico",
+    "contenedor": "Inorgánico (No reciclable)",
+    "instrucciones": "Los laminados multicapa plástico-aluminio van a basura común."
+  },
+  {
+    "id": 12,
+    "nombre": "Pajillas y cubiertos plásticos desechables",
+    "alias": ["tenedor desechable", "cuchara plastica", "pajilla", "vaso desechable sucio"],
+    "categoria": "inorganico",
+    "contenedor": "Inorgánico (No reciclable)",
+    "instrucciones": "Plásticos de un solo uso difíciles de reciclar."
+  },
+  {
+    "id": 13,
+    "nombre": "Caja de pizza manchada de grasa",
+    "alias": ["pizza", "carton grasoso"],
+    "categoria": "inorganico",
+    "contenedor": "Inorgánico (No reciclable)",
+    "instrucciones": "La grasa arruina el reciclaje. Si la tapa está limpia, recórtala y ponla en Reciclable."
+  },
+  {
+    "id": 14,
+    "nombre": "Papel higiénico y toallas sanitarias",
+    "alias": ["papel de baño", "toalla femenina", "tampon", "panal"],
+    "categoria": "inorganico",
+    "contenedor": "Inorgánico (No reciclable)",
+    "instrucciones": "Residuo sanitario; depositar en bolsa cerrada en desecho común."
+  },
+  {
+    "id": 5,
+    "nombre": "Botellas de plástico (PET / PEAD)",
+    "alias": ["gaseosa", "agua pura", "bote de plastico", "envase de jugo", "bote de shampoo"],
+    "categoria": "reciclable",
+    "contenedor": "Reciclable",
+    "instrucciones": "Vacías, enjuagadas y aplastadas. Con su tapita puesta."
+  },
+  {
+    "id": 6,
+    "nombre": "Latas de aluminio y hojalata",
+    "alias": ["lata de gaseosa", "cerveza", "lata de atun", "conservas", "frijoles en lata"],
+    "categoria": "reciclable",
+    "contenedor": "Reciclable",
+    "instrucciones": "Enjuagadas y sin residuos líquidos o restos de comida."
+  },
+  {
+    "id": 7,
+    "nombre": "Cajas de cartón y hojas de papel",
+    "alias": ["hojas bond", "cuaderno", "periodico", "caja de cereal", "cartoncillo"],
+    "categoria": "reciclable",
+    "contenedor": "Reciclable",
+    "instrucciones": "Secos, limpios y desarmados para ocupar menos espacio."
+  },
+  {
+    "id": 8,
+    "nombre": "Envases de vidrio y frascos",
+    "alias": ["botella de vidrio", "frasco de mermelada", "bote de cafe"],
+    "categoria": "reciclable",
+    "contenedor": "Reciclable",
+    "instrucciones": "Enteros, limpios y sin tapas metálicas."
   }
 ]
